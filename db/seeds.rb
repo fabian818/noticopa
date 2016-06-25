@@ -7,4 +7,44 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Tournament.create(name: 'Copa America', init_date: '2016-05-10', end_date: '2016-06-29')
+# Tournament.create(name: 'Copa America', init_date: '2016-05-10', end_date: '2016-06-29')
+
+team1 = Team.create(name: 'Estados Unidos')
+team2 = Team.create(name: 'Colombia')
+team3 = Team.create(name: 'Chile')
+team4 = Team.create(name: 'Argentina')
+
+match1 = Match.create(tournament_id: 1, date: '2016-05-22', hour: '15:00:00')
+match2 = Match.create(tournament_id: 1, date: '2016-05-28', hour: '20:00:00')
+match3 = Match.create(tournament_id: 1, date: '2016-06-10', hour: '13:00:00')
+match4 = Match.create(tournament_id: 1, date: '2016-06-20', hour: '10:00:00')
+match5 = Match.create(tournament_id: 1, date: '2016-06-15', hour: '11:00:00')
+match6 = Match.create(tournament_id: 1, date: '2016-05-23', hour: '23:00:00')
+
+empate = Type.create(name: 'Empate', points: 1)
+victoria = Type.create(name: 'Victoria', points: 3)
+derrota = Type.create(name: 'Derrota', points: 0)
+
+# team1 vs team 2, match 1, empates
+detail1 = Detail.create(match: match1, team: team1, type: empate)
+detail1 = Detail.create(match: match1, team: team2, type: empate)
+
+# team1 vs team 3, match 2, victoria
+detail1 = Detail.create(match: match2, team: team1, type: victoria)
+detail1 = Detail.create(match: match2, team: team1, type: derrota)
+
+# team1 vs team 4, match 3, victoria
+detail1 = Detail.create(match: match3, team: team1, type: victoria)
+detail1 = Detail.create(match: match3, team: team1, type: derrota)
+
+# team2 vs team 3, match 4, perdida
+detail1 = Detail.create(match: match4, team: team1, type: derrota)
+detail1 = Detail.create(match: match4, team: team1, type: victoria)
+
+# team2 vs team 4, match 5, empate
+detail1 = Detail.create(match: match5, team: team1, type: empate)
+detail1 = Detail.create(match: match5, team: team1, type: empate)
+
+# team3 vs team 4, match 6, perdida
+detail1 = Detail.create(match: match6, team: team1, type: derrota)
+detail1 = Detail.create(match: match6, team: team1, type: victoria)

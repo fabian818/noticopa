@@ -1,7 +1,8 @@
 class Api::MatchesController < ApplicationController
-  def index
-  end
+	def index
+		@matches = Tournament.find(params[:tournament_id]).matches
+	end
 
-  def show
-  end
+	def show
+	end
 end
