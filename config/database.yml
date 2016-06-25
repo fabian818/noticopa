@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: hackaton_production
-  username: hackaton
-  password: <%= ENV['HACKATON_DATABASE_PASSWORD'] %>
+  host: ec2-23-21-193-140.compute-1.amazonaws.com
+  database: d1gt3ekjn5074t
+  username: qgqiponvcpbnof
+  password: YqAAqCLJNg8LaLGgmshKRGNlWc
