@@ -4,5 +4,6 @@ class Api::MatchesController < ApplicationController
 	end
 
 	def show
+		@match = Match.find(params[:match_id])
 	end
 end
