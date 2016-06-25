@@ -1,4 +1,5 @@
 class Api::TournamentsController < ApplicationController
-  def index
-  end
+	def index
+		@tournaments = Tournament.all
+	end
 end

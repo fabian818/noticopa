@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
   namespace :api do
-    get 'matches/index'
-  end
-
-  namespace :api do
-    get 'matches/show'
-  end
-
-  namespace :api do
-    get 'tournaments/index'
+    namespace :matches do
+      get 'index'
+      get 'show'
+    end
+    namespace :tournaments do
+      get 'index'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
