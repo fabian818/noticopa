@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'matches/index'
+  end
+
+  namespace :api do
+    get 'matches/show'
+  end
+
+  namespace :api do
+    get 'tournaments/index'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
